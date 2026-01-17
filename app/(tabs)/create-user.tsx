@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Button, TextInput, View, Text, TouchableWithoutFeedback, Keyboard, Alert, StyleSheet} from "react-native";
 import {createUser} from "./../db/user.repository";
+import CustomButton from "@/components/custom-button";
 
 const CreateUserScreen = () => {
     const [name, setName] = useState('');
@@ -36,10 +37,9 @@ const CreateUserScreen = () => {
                    onChangeText={setEmail}
                    style={styles.input}
                />
-               <Button
+               <CustomButton
                    title={'Создать'}
                    onPress={handleCreateUser}
-                   color={'green'}
                />
            </View>
         </TouchableWithoutFeedback>
